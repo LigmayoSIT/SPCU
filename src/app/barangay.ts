@@ -6,8 +6,9 @@ export interface BarangayInfo{
     barangayLocation: string;
     issueAndConcern: string;
     placeOfResidence: string;
-    nameOfResident: stringl;
+    nameOfResident: string;
 }
+export type BarangayInput = Omit<BarangayInfo, '_id'>;
 
 @Injectable({
     providedIn: 'root'
