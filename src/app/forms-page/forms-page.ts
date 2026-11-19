@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, inject, computed, signal, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Barangay } from '../barangay';
+import { Barangay, barangayInfo } from '../barangay';
 
 @Component({
   imports: [ReactiveFormsModule],
@@ -25,7 +25,7 @@ export class FormsPage implements OnInit {
     this.barangayForms.fetchBarInfo();
   }
 
-  startEdit(cardInfo: any){
+  startEdit(cardInfo: BarangayInfo){
     this.editingId.set(cardInfo._id);
     this.barangayFormsPage.patchValue({
       barangayLocation: cardInfo.barangayLocation,
