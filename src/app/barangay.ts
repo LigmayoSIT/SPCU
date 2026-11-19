@@ -1,6 +1,14 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+export interface BarangayInfo{
+    _id: string;
+    barangayLocation: string;
+    issueAndConcern: string;
+    placeOfResidence: string;
+    nameOfResident: stringl;
+}
+
 @Injectable({
     providedIn: 'root'
 })
