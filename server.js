@@ -14,14 +14,19 @@ app.listen(5000, () => {
 })
 
 const BarFillOut = mongoose.model('BarFillOut', new mongoose.Schema({
-    barangayName: String,
-    concern: String,
-    suggestedPriorityLevel: Number,
+    barangayLocation: { type: String, required: true },
+    issueAndConcern: { type: String, required: true },
+    placeOfResidence: { type: String, required: true },
+    nameOfResident: { type: String, default: '' },
 }))
 
 app.post('/api/barangay', async (req, res) => {
-    const barangay = new BarFillOut(req.body);
-    await barangay.save();
+  try {
+    const created = await Barangay.create(req.body);
+    res.status(201).json(created);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 })
 
 app.post('/api/pokemon/ :id', async (req, res) => {

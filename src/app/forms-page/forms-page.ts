@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, inject, computed, signal, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Barangay, barangayInfo } from '../barangay';
+import { Barangay, BarangayInfo } from '../barangay';
 
 @Component({
   imports: [ReactiveFormsModule],

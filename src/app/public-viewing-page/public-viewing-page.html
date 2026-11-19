@@ -1,1 +1,16 @@
 <h1>Submited Tickets</h1>
+
+<div class="ticket-lists">
+    @for (card of barangayService.barangayForums(); track card._id){
+        <div class="ticket-card">
+            <h2>{{ card.barangayLocation }}</h2>
+            <p><strong>Issue:</strong>{{ card.issueAndConcern }}</p>
+            <p><strong>Residence:</strong>{{ card.nameOfResident }}</p>
+            @if (card.nameOfResident){
+                <p><strong>Submitted by:</strong>{{ card.nameOfResident }}</p>
+            }
+        </div>
+    } @empty {
+        <P>No Tickets have been submitted yet.</P>
+    }
+</div>

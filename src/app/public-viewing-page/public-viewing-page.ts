@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Barangay } from '../barangay';
 
 @Component({
   imports: [],
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './public-viewing-page.css',
   templateUrl: './public-viewing-page.html',
 })
-export class PublicViewingPage {}
+export class PublicViewingPage implements OnInit{
+  protected barangayService = inject(Barangay);
+  ngOnInit(){
+    this.barangayService.fetchBarInfo();
+  }
+}
