@@ -4,13 +4,13 @@ import { NavigationBar } from './navigation-bar/navigation-bar';
 import { MainPage } from './main-page/main-page';
 import { FormsPage } from './forms-page/forms-page';
 import { PublicViewingPage } from './public-viewing-page/public-viewing-page';
+import { AboutPage } from './about-page/about-page';
 
 @Component({
-  imports: [RouterOutlet, NavigationBar, MainPage, FormsPage, PublicViewingPage],
+  imports: [RouterOutlet, NavigationBar],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
-  standalone: true
 })
 export class App {
   protected readonly title = signal('SPCU');

@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = requrie('mongoose');
+const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
@@ -30,7 +30,7 @@ app.post('/api/pokemon/ :id', async (req, res) => {
     res.send(updateBarForms);
 })
 
-app.get('/api/barangay/ : id', async (req, res) => {
+app.get('/api/barangay/ :id', async (req, res) => {
     const list = await BarFillOut.find();
     res.send(list);
 })
