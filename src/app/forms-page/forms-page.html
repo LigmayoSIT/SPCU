@@ -4,26 +4,16 @@
   <form [formGroup]="barangayFormsPage" (ngSubmit)="onSubmit()" novalidate>
     <div class="cardForm">
       <label for="barangayLocation">Barangay:</label>
-      <input id="barangayLocation" type="text" formControlName="barangayLocation"
-             placeholder="Name of your Barangay" />
-    </div>
-
-    <div class="cardForm">
+      <input id="barangayLocation" type="text" formControlName="barangayLocation" placeholder="Name of your Barangay" />
+    
       <label for="issueAndConcern">Issue or concern:</label>
-      <input id="issueAndConcern" type="text" formControlName="issueAndConcern"
-             placeholder="State your concerns or issues" />
-    </div>
+      <input id="issueAndConcern" type="text" formControlName="issueAndConcern" placeholder="State your concerns or issues" />
 
-    <div class="cardForm">
       <label for="placeOfResidence">Place of residence:</label>
-      <input id="placeOfResidence" type="text" formControlName="placeOfResidence"
-             placeholder="e.g. Juan Road" />
-    </div>
+      <input id="placeOfResidence" type="text" formControlName="placeOfResidence" placeholder="e.g. Juan Road" />
 
-    <div class="cardForm">
-      <label for="nameOfResident">Name (optional):</label>
-      <input id="nameOfResident" type="text" formControlName="nameOfResident"
-             placeholder="Your name" />
+      <label for="nameOfResident">Name (Optional):</label>
+      <input id="nameOfResident" type="text" formControlName="nameOfResident" placeholder="Your name" />
     </div>
 
     <hr />
