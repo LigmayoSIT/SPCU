@@ -59,3 +59,10 @@ app.put('/api/pokemon/ :id', async (req, res) => {
     const updateBarForms = await BarFillOut.findByIdAndUpdate(req.params.id, req.body, {new: true});
     res.send(updateBarForms);
 })
+
+//Startup Log
+console.log('Routes Loaded from:', __filename);
+app.use((req, res) => {
+    console.log('Umatched:', req.method, req.originalUrl);
+    res.status(404).json({message: 'No route for ${req.method} ${req.originalUrl}'});
+});
