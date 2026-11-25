@@ -40,6 +40,15 @@ app.get('/api/barangay/ :id', async (req, res) => {
     res.send(list);
 })
 
+app.get('/api/barangay/:id', async (req, res) => {
+    try{
+        const items = await Barangay.find().sort({_id: -1});
+        res.json(items);
+    } catch (err){
+        res.status(500).json({ message: err.message });
+    }
+})
+
 app.delete('/api/pokemon/ :id', async (req, res) => {
     const {id} = req.params;
     await BarFillOut.findByIdAndDelete(id);
