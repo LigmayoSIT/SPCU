@@ -22,7 +22,6 @@ const BarFillOut = mongoose.model(
   }),
 );
 
-// List all
 app.get('/api/barangay', async (req, res) => {
   try {
     const items = await BarFillOut.find().sort({ _id: -1 });
@@ -32,7 +31,6 @@ app.get('/api/barangay', async (req, res) => {
   }
 });
 
-// Create
 app.post('/api/barangay', async (req, res) => {
   try {
     const created = await BarFillOut.create(req.body);
@@ -42,7 +40,6 @@ app.post('/api/barangay', async (req, res) => {
   }
 });
 
-// Update
 app.put('/api/barangay/:id', async (req, res) => {
   try {
     const updated = await BarFillOut.findByIdAndUpdate(req.params.id, req.body, {
@@ -56,7 +53,6 @@ app.put('/api/barangay/:id', async (req, res) => {
   }
 });
 
-// Delete
 app.delete('/api/barangay/:id', async (req, res) => {
   try {
     await BarFillOut.findByIdAndDelete(req.params.id);
