@@ -6,6 +6,7 @@ export interface BarangayInfo{
     barangayLocation: string;
     issueAndConcern: string;
     placeOfResidence: string;
+    roadNumber: number;
     nameOfResident: string;
 }
 export type BarangayInput = Omit<BarangayInfo, '_id'>;
@@ -22,13 +23,13 @@ export class Barangay {
     fetchBarInfo(){
         this.http.get<any[]>(this.apiURL).subscribe(data => this.barangayForums.set(data));
     }
-    saveBarInfo(data: any){
+    saveBarInfo(data: BarangayInput){
         return this.http.post(this.apiURL, data);
     }
     deleteBarInfo(id: string){
         return this.http.delete<void>(`${this.apiURL}/${id}`);
     }
-    updateBarInfo(id: string, data: any){
+    updateBarInfo(id: string, data: BarangayInput){
         return this.http.put(`${this.apiURL}/${id}`, data);
     }
 }

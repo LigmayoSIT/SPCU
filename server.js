@@ -18,6 +18,7 @@ const BarFillOut = mongoose.model(
     barangayLocation: { type: String, required: true },
     issueAndConcern: { type: String, required: true },
     placeOfResidence: { type: String, required: true },
+    roadNumber: { type: Number, required: true, min: 1 },
     nameOfResident: { type: String, default: '' },
   }),
 );

@@ -5,9 +5,10 @@
         <div class="ticket-card">
             <h2>{{ card.barangayLocation }}</h2>
             <p class="body"><strong>Issue:</strong>{{ card.issueAndConcern }}</p>
-            <p><strong>Residence:</strong>{{ card.placeOfResidence }}</p>
+            <p><strong>Residence: </strong>{{ card.placeOfResidence }}</p>
+            <p><strong>Road/Street Number: </strong>{{ card.roadNumber }}</p>
             @if (card.nameOfResident){
-                <p><strong>Submitted by:</strong>{{ card.nameOfResident }}</p>
+                <p><strong>Submitted by: </strong>{{ card.nameOfResident }}</p>
             }
             <button (click)="deleteBarInfo(card._id)" class="btn-delete">Resolved</button>
         </div>

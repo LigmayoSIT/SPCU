@@ -18,6 +18,7 @@ export class FormsPage implements OnInit {
     barangayLocation: ['', Validators.required],
     issueAndConcern: ['', Validators.required],
     placeOfResidence: ['', Validators.required],
+    roadNumber: [1, Validators.required],
     nameOfResident: ['']
   });
 
@@ -31,6 +32,7 @@ export class FormsPage implements OnInit {
       barangayLocation: cardInfo.barangayLocation,
       issueAndConcern: cardInfo.issueAndConcern,
       placeOfResidence: cardInfo.placeOfResidence,
+      roadNumber: cardInfo.roadNumber,
       nameOfResident: cardInfo.nameOfResident
     });
   }
