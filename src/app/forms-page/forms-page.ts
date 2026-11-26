@@ -18,7 +18,7 @@ export class FormsPage implements OnInit {
     barangayLocation: ['', Validators.required],
     issueAndConcern: ['', Validators.required],
     placeOfResidence: ['', Validators.required],
-    nameOfResident: ['', Validators.required]
+    nameOfResident: ['']
   });
 
   ngOnInit(){

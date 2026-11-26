@@ -3,17 +3,22 @@
 <div class="forms-page">
   <form [formGroup]="barangayFormsPage" (ngSubmit)="onSubmit()" novalidate>
     <div class="cardForm">
-      <label for="barangayLocation">Barangay:</label>
-      <input id="barangayLocation" type="text" formControlName="barangayLocation" placeholder="Name of your Barangay" />
-    
-      <label for="issueAndConcern">Issue or concern:</label>
-      <input id="issueAndConcern" type="text" formControlName="issueAndConcern" placeholder="State your concerns or issues" />
-
-      <label for="placeOfResidence">Place of residence:</label>
-      <input id="placeOfResidence" type="text" formControlName="placeOfResidence" placeholder="e.g. Juan Road" />
-
-      <label for="nameOfResident">Name (Optional):</label>
-      <input id="nameOfResident" type="text" formControlName="nameOfResident" placeholder="Your name" />
+      <li class="item1">
+        <label for="barangayLocation">Barangay:</label>
+        <input id="barangayLocation" type="text" formControlName="barangayLocation" placeholder="Name of your Barangay" />
+      </li>
+      <li class="item2">
+        <label for="issueAndConcern">Issue or concern:</label>
+        <input id="issueAndConcern" type="text" formControlName="issueAndConcern" placeholder="State your concerns or issues" />
+      </li>  
+      <li class="item3">
+        <label for="placeOfResidence">Place of residence:</label>
+        <input id="placeOfResidence" type="text" formControlName="placeOfResidence" placeholder="e.g. Juan Road" />
+      </li>  
+      <li class="item4">
+        <label for="nameOfResident">Name (Optional):</label>
+        <input id="nameOfResident" type="text" formControlName="nameOfResident" placeholder="Your name" />
+      </li>  
     </div>
 
     <hr />

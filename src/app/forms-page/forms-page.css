@@ -1,0 +1,83 @@
+h1 {
+    text-align: center;
+    padding: 35px;
+}
+
+.forms-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cardForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: flex;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item1 {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.item2 {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.item3 {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.item4 {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cardForm input {
+    display: flex;
+    width: 600px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
