@@ -2,7 +2,7 @@
 
 <div class="forms-page">
   <form [formGroup]="barangayFormsPage" (ngSubmit)="onSubmit()" novalidate>
-    <div class="cardForm">
+    <ul class="cardForm">
       <li class="item1">
         <label for="barangayLocation">Barangay:</label>
         <input id="barangayLocation" type="text" formControlName="barangayLocation" placeholder="Name of your Barangay" />
@@ -19,7 +19,7 @@
         <label for="nameOfResident">Name (Optional):</label>
         <input id="nameOfResident" type="text" formControlName="nameOfResident" placeholder="Your name" />
       </li>  
-    </div>
+    </ul>
 
     <hr />
 
